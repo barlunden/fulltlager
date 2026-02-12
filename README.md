@@ -6,6 +6,8 @@
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase)](https://supabase.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38BDF8?logo=tailwindcss)](https://tailwindcss.com/)
 
+🌐 **[Live Demo →](https://fulltlager.netlify.app)**
+
 ---
 
 ## 📖 Om Prosjektet
