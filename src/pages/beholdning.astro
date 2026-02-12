@@ -314,38 +314,50 @@ const availableTypes = Array.from(new Set(stockItems.filter(i => categoryFilter 
             <input type="hidden" name="category" value="bulb" />
             
             <div class="grid grid-cols-2 gap-3">
-              <input 
-                type="text" 
-                name="type" 
-                placeholder="Type (E27...)" 
-                required 
-                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
-              />
-              <select 
-                name="shape" 
-                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400"
-              >
-                <option value="">Standard</option>
-                <option value="Krone">Krone</option>
-                <option value="Globe">Globe</option>
-              </select>
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Sokkel/Type</label>
+                <input 
+                  type="text" 
+                  name="type" 
+                  placeholder="F.eks. E27, GU10" 
+                  required 
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
+                />
+              </div>
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Form (valgfritt)</label>
+                <select 
+                  name="shape" 
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400"
+                >
+                  <option value="">Standard</option>
+                  <option value="Krone">Krone</option>
+                  <option value="Globe">Globe</option>
+                </select>
+              </div>
             </div>
             
             <div class="grid grid-cols-2 gap-3">
-              <input 
-                type="number" 
-                name="initialCount" 
-                placeholder="Antall" 
-                required 
-                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
-              />
-              <input 
-                type="number" 
-                name="minThreshold" 
-                placeholder="Min.nivå" 
-                value="2"
-                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
-              />
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Antall kjøpt</label>
+                <input 
+                  type="number" 
+                  name="initialCount" 
+                  placeholder="F.eks. 10" 
+                  required 
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
+                />
+              </div>
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Min. nivå</label>
+                <input 
+                  type="number" 
+                  name="minThreshold" 
+                  placeholder="F.eks. 2" 
+                  value="2"
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
+                />
+              </div>
             </div>
             
             <button 
@@ -364,29 +376,38 @@ const availableTypes = Array.from(new Set(stockItems.filter(i => categoryFilter 
             <input type="hidden" name="action" value="add_new_stock_type" />
             <input type="hidden" name="category" value="battery" />
             
-            <input 
-              type="text" 
-              name="type" 
-              placeholder="Type (AA, AAA...)" 
-              required 
-              class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
-            />
-            
-            <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Battertype</label>
               <input 
-                type="number" 
-                name="initialCount" 
-                placeholder="Antall" 
+                type="text" 
+                name="type" 
+                placeholder="F.eks. AA, AAA, CR2032" 
                 required 
                 class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
               />
-              <input 
-                type="number" 
-                name="minThreshold" 
-                placeholder="Min.nivå" 
-                value="2"
-                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
-              />
+            </div>
+            
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Antall kjøpt</label>
+                <input 
+                  type="number" 
+                  name="initialCount" 
+                  placeholder="F.eks. 20" 
+                  required 
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
+                />
+              </div>
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Min. nivå</label>
+                <input 
+                  type="number" 
+                  name="minThreshold" 
+                  placeholder="F.eks. 2" 
+                  value="2"
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
+                />
+              </div>
             </div>
             
             <button 
@@ -406,36 +427,48 @@ const availableTypes = Array.from(new Set(stockItems.filter(i => categoryFilter 
             <input type="hidden" name="category" value="ink" />
             
             <div class="grid grid-cols-2 gap-3">
-              <input 
-                type="text" 
-                name="type" 
-                placeholder="Type (HP304...)" 
-                required 
-                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
-              />
-              <input 
-                type="text" 
-                name="shape" 
-                placeholder="Farge (BK, C...)" 
-                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
-              />
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Blekktype</label>
+                <input 
+                  type="text" 
+                  name="type" 
+                  placeholder="F.eks. HP304, Canon PG-540" 
+                  required 
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
+                />
+              </div>
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Farge (valgfritt)</label>
+                <input 
+                  type="text" 
+                  name="shape" 
+                  placeholder="F.eks. BK, C, M, Y" 
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
+                />
+              </div>
             </div>
             
             <div class="grid grid-cols-2 gap-3">
-              <input 
-                type="number" 
-                name="initialCount" 
-                placeholder="Antall" 
-                required 
-                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
-              />
-              <input 
-                type="number" 
-                name="minThreshold" 
-                placeholder="Min.nivå" 
-                value="1"
-                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
-              />
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Antall kjøpt</label>
+                <input 
+                  type="number" 
+                  name="initialCount" 
+                  placeholder="F.eks. 5" 
+                  required 
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
+                />
+              </div>
+              <div>
+                <label class="block text-white text-xs font-black uppercase mb-2 tracking-widest">Min. nivå</label>
+                <input 
+                  type="number" 
+                  name="minThreshold" 
+                  placeholder="F.eks. 1" 
+                  value="1"
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3 font-bold outline-none focus:border-indigo-400" 
+                />
+              </div>
             </div>
             
             <button 
