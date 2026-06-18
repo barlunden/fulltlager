@@ -23,26 +23,21 @@ if (Astro.request.method === "POST") {
   }
 
   if (action === "create") {
-    const name = data.get("name")?.toString();
-    const type = data.get("type")?.toString() || "home";
-    if (name) {
-      const { data: house, error: houseErr } = await authedSupabase
-        .from("households")
-        .insert([{ name, type }])
-        .select()
-        .single();
+  const name = data.get("name")?.toString();
+  const type = data.get("type")?.toString() || "home";
+  if (name) {
+    const { data: house, error: houseErr } = await authedSupabase
+      .from("households")
+      .insert([{ name, type }])
+      .select()
+      .single();
 
-      if (house) {
-        await authedSupabase.from("household_members").insert([{
-          household_id: house.id,
-          user_id: user.id,
-          role: "admin"
-        }]);
-        Astro.cookies.set("active_household_id", house.id, { path: "/", sameSite: "lax" });
-        return Astro.redirect("/dashboard");
-      }
+    if (house) {
+      Astro.cookies.set("active_household_id", house.id, { path: "/", sameSite: "lax" });
+      return Astro.redirect("/dashboard");
     }
   }
+}
 }
 
 const { data: memberships } = await authedSupabase
