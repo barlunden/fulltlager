@@ -12,8 +12,8 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
   // Send passord-reset e-post
   const { error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `${new URL(request.url).origin}/api/auth/callback?next=/tilbakestill-passord`,
-  });
+  redirectTo: `${new URL(request.url).origin}/tilbakestill-passord`,
+});
 
   if (error) {
     console.error("Reset password error:", error);
